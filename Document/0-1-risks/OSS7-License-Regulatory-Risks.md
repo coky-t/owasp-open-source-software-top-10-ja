@@ -1,6 +1,6 @@
-## OSS-RISK-7 : License and Regulatory Risk
+## OSS-RISK-7 : ライセンスと規制のリスク (License and Regulatory Risk)
 
-**Description:**
+**説明:**
 
 A component or project may not have a license at all, one that is incompatible with the intended use by a downstream consumer, or one whose requirements are not or cannot be met by a downstream user.
 
@@ -12,11 +12,11 @@ It is important to use components in compliance with their license terms. The ab
 
 The violation of legal and regulatory requirements can constrain or hamper addressing certain verticals or markets.
 
-**Examples:**
+**事例:**
 
 1. [Free Software Foundation, Inc. v. Cisco Systems, Inc.](https://www.fsf.org/licensing/complaint-2008-12-11.pdf) (2008)
 
-**Actions:**
+**対応:**
 
 1. Identify acceptable licenses for the intended use of the component in the software under development.
 
@@ -25,7 +25,7 @@ The violation of legal and regulatory requirements can constrain or hamper addre
 3. Avoid components without license.
 4. Scrutinize component files for multiple and/or incompatible licenses.
 
-**References:**
+**参照:**
 
 1. [OSI Approved Licenses](https://opensource.org/licenses/)
 2. [SPDX License List](https://spdx.org/licenses/)

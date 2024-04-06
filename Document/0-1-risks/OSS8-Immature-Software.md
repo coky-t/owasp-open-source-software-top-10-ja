@@ -1,6 +1,6 @@
-## OSS-RISK-8 : Immature-Software
+## OSS-RISK-8 : 未成熟なソフトウェア (Immature-Software)
 
-**Description:**
+**説明:**
 
 An open source project may not apply development best-practices, e.g., not use a standard versioning scheme, have no regression test suite, no development or review guidelines or no documentation. As a result, a component may not work reliably or securely (in the sense of having security weaknesses that result in exploitable vulnerabilities).
 
@@ -8,11 +8,11 @@ The dependency on an immature component or project comes with operational risks.
 
 For example, a component or project may lack documentation, may not use or comply with an established versioning scheme (which can result in breaking changes during component updates), or may not have a test suite to discover regressions introduced through pull/merge requests. Such cases can increase the effort of developers depending on such components.
 
-**Examples:**
+**事例:**
 
 - None
 
-**Actions:**
+**対応:**
 
 1. Check quality indicators and whether a project follows development best-practices.
 
@@ -25,6 +25,6 @@ For example, a component or project may lack documentation, may not use or compl
 
 2. A proxy for checking project maturity may also be the number of downstream dependents.
 
-**References:**
+**参照:**
 
 1. [OpenSSF Best Practices Badge Program](https://www.bestpractices.dev/en)

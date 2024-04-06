@@ -1,6 +1,6 @@
-## OSS-RISK-4 : Unmaintained software
+## OSS-RISK-4 : メンテナンスされていないソフトウェア (Unmaintained software)
 
-**Description:**
+**説明:**
 
 A component or component version may not be actively developed or supported any more, i.e. patches for new functional and security bugs may not be developed.
 
@@ -8,13 +8,13 @@ Patch development may therefore need to be done by downstream developers with po
 
 This can result in increased efforts and longer resolution times. During that time, system access or functionality may need to be restricted to avoid continued exposure.
 
-**Examples:**
+**事例:**
 
 1. [core-js](https://www.theregister.com/2020/03/26/corejs_maintainer_jailed_code_release) (npm, 2020)
 2. [Gorilla Web Toolkit](https://www.chainguard.dev/unchained/a-tale-of-two-software-security-risks) (Go, 2022)
 3. [minimist](https://twitter.com/ljharb/status/1579610392414007299?lang=en) (npm, 2022)
 
-**Actions:**
+**対応:**
 
 1. Check indicators for project liveliness and health.
 
@@ -34,7 +34,7 @@ This can result in increased efforts and longer resolution times. During that ti
     The Spring project is a great example for documenting [support time frames](https://spring.io/projects/spring-boot#support).
 3. Check the project page to see whether its has been archived, or whether there are any explicit statements regarding the project's maintenance status.
 
-**References:**
+**参照:**
 
 1. OWASP Top 10:2021 [A06:2021 - Vulnerable and Outdated Components](https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/)
 2. [Bus factor](https://en.wikipedia.org/wiki/Bus_factor)

@@ -1,17 +1,17 @@
-## OSS-RISK-2 : Compromise of Legitimate Package
+## OSS-RISK-2 : 正規パッケージの侵害 (Compromise of Legitimate Package)
 
-**Description:**
+**説明:**
 
 Attackers may compromise resources that are part of an existing legitimate project or of the distribution infrastructure in order to inject malicious code into a component, e.g, through hijacking the accounts of legitimate project maintainers or exploiting vulnerabilities in package repositories.
 
 Malicious code can be executed on end-user systems or on systems belonging to the organization that develops and/or operates the dependent software (e.g., build systems or developer workstations). The confidentiality, integrity and availability of systems and the data processed/stored thereon is at risk.
 
-**Examples:**
+**事例:**
 
 1. [Event-stream](https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident): This attack on a legitimate component targeted users of Copay Bitcoin wallets.
 2. [The SolarWinds Cyber-Attack](https://www.cisecurity.org/solarwinds)
 
-**Actions:**
+**対応:**
 
 There's no single action to detect and prevent the ingestion of compromised packages. Organizations should consult emerging standards and frameworks like the Secure Supply Chain Consumption Framework (S2C2F) to inform themselves about possible safeguards, which should be selected and prioritized according to individual security requirements and risk appetite.
 
@@ -21,7 +21,7 @@ Example actions comprise:
 3. Review code manually and/or automatically
 4. Retrieve all components from a secured internal store (such binary repositories host home-made binaries and mirror external components)
 
-**References:**
+**参照:**
 
 1. [Secure Supply Chain Consumption Framework](https://www.microsoft.com/en-us/securityengineering/opensource) (S2C2F)
 2. [Risk Explorer for Software Supply Chains](https://riskexplorer.endorlabs.com/) Subvert Legitimate Package (AV-001)

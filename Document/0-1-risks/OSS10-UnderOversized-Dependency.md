@@ -1,6 +1,6 @@
-## OSS-RISK-10 : Under/over-sized Dependency
+## OSS-RISK-10 : 過小または過大な依存関係 (Under/over-sized Dependency)
 
-**Description:**
+**説明:**
 
 A component may provide very little functionality (e.g. npm micro packages) or a lot of functionality (of which only a fraction may be used).
 
@@ -8,7 +8,7 @@ Very small components, e.g. ones containing few lines of code only, are subject 
  
 Very large components, on the other hand, may have accumulated many features that are not needed in standard use-cases, but contribute to the component's attack surface. Additionally, such unused features may also bring in additional, unused dependencies (bloated dependencies).
 
-**Examples:**
+**事例:**
 
 1. [Apache Log4j](https://logging.apache.org/log4j/2.x/)
 
@@ -18,14 +18,14 @@ Very large components, on the other hand, may have accumulated many features tha
 
     Contained 11 lines of code to pad strings. Its removal from npm broke the builds of numerous downstream consumers.
 
-**Actions:**
+**対応:**
 
 1. Become aware of unused component capabilities, esp. if they use critical (security sensitive) APIs such as to establish network connections.
 
     Evaluate possibilities to disable unused capabilities, or move to smaller alternative open source components with fewer capabilities.
 2. Become aware of micro packages, and consider redeveloping their functionality internally.
 
-**References:**
+**参照:**
 
 1. Definition: [Feature creep](https://en.wikipedia.org/wiki/Feature_creep)
 2. Tools to uncover the use of security sensitive APIs:
