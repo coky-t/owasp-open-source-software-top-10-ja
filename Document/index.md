@@ -9,44 +9,44 @@ pitch: Top-10 security and operational risks related to using OSS.
 
 ![top 10 oss risks](https://raw.githubusercontent.com/OWASP/www-project-open-source-software-top-10/main/assets/images/top10.png)
 
-## Introduction
+## はじめに
 
-Despite the heavy reliance on OSS in the software supply chain, the industry lacks a consistent way to understand and measure risk for OSS. Risk management in OSS started with license management, and then evolved to CVEs, but we still lack a holistic approach to OSS risk management that encompasses security, legal, and opertional aspects. With this document, we're excited to collaborate with industry experts and leaders to create just that. 
+ソフトウェアサプライチェーンにおいて OSS への依存度が高いにもかかわらず、業界には OSS のリスクを理解し測定するための一貫した方法がありません。OSS のリスクマネジメントはライセンスマネジメントから始まり、CVE へと進化してきましたが、セキュリティ、法律、運用の側面を包含する OSS リスクマネジメントへの総合的なアプローチが依然としてありません。このドキュメントで、業界の専門家やリーダーと協力して、まさにそれを作成できることに私たちは喚起しています。
 
-Over the last decade of reliance on OSS, known vulnerabilities, captured as CVEs, have emerged as the key metric of security. Known vulnerabilities, while an important signal, typically capture mistakes made by well-intentioned developers. These mistakes could be exploited by attackers and should be fixed, but they hardly encompass the full spectrum of risks that a reliance on OSS includes. 
+OSS に依存してきた過去十年、既知の脆弱性が CVE として捕捉され、セキュリティの重要な指標として浮上してきました。既知の脆弱性は重要なシグナルですが、一般的には善意の開発者が犯した間違いを捕捉しています。これらの間違いは攻撃者に悪用される可能性があるため修正すべきですが、OSS への依存が含むリスクの全範囲を網羅しているわけではありません。
 
-Operational risks, like ones introduced by outdated or unmaintained software, or next-generation supply chain attacks like name confusion attacks, cannot be captured by CVEs. These risks are significant, as highlighted by the recent [Open Source Security and Risk Analysis report](https://www.synopsys.com/content/dam/synopsys/sig-assets/reports/rep-ossra-2023.pdf) by Synopsys:
+古いままのソフトウェアやメンテナンスされていないソフトウェアによってもたらされるようなものや、名前混乱攻撃などの次世代のサプライチェーン攻撃などの運用リスクは、CVE では捕捉できません。Synopsys が最近発表した [Open Source Security and Risk Analysis report](https://www.synopsys.com/content/dam/synopsys/sig-assets/reports/rep-ossra-2023.pdf) でハイライトしているように、これらのリスクは重大です。
 
-- 89% of codebases contain OSS that is more than 4 years out of date
-- 91% of codebases contain components that have had no new development in over two years
+- コードベースの 89% には 4 年以上古い OSS が含まれています
+- コードベースの 91% には 2 年以上新しい開発が行われていないコンポーネントが含まれています
 
-On [The State of Dependency Management](https://endorlabs.webflow.io/learn/state-of-dependency-management), the Station 9 research team from Endor Labs uncovered that 95% of vulnerabilities exist in transitive dependencies (the software packages automatically brought in by the OSS selected by developers). And out of those, many are not actually reachable, or will cause a devastating ripple effect of incompatibility if they were updated. With this list, which was peer-reviewed and contributed to by over 20 CISOs and CTOs, the team sought to find the top risks security and development teams should be ready for, both operational and security. 
+[The State of Dependency Management](https://endorlabs.webflow.io/learn/state-of-dependency-management) で、Endor Labs の Station 9 研究チームは、脆弱性の 95% が推移的依存関係 (開発者が選択して OSS によって自動的に取り込まれるソフトウェアパッケージ) に存在することを明らかにしました。そして、そのうちの多くは実際には到達できないか、アップデートされたとしても互換性がないという壊滅的な波及効果を引き起こすでしょう。20 人以上の CISO および CTO が査読と貢献を行ったこのリストで、チームは運用とセキュリティの両面でセキュリティチームと開発チームが備える必要がある主要なリスクを見つけ出そうとしました。
 
-The top 10 OSS risks are:
+Top 10 OSS リスクは以下のとおりです。
 
-- [OSS-RISK-1](./0-1-risks/OSS1-Known-Vulnerabilities.md) Known Vulnerabilities: A component version may contain vulnerable code, accidentally introduced by its developers. Vulnerability details are publicly disclosed, e.g, through CVE, GitHub Security Advisories or other, more informal communication channels. Exploits and patches may or may not be available.
-- [OSS-RISK-2](./0-1-risks/OSS2-Compromise-Legitimate-Package.md) Compromise of Legitimate Package: Attackers may compromise resources that are part of an existing legitimate project or of the distribution infrastructure in order to inject malicious code into a component, e.g, through hijacking the accounts of legitimate project maintainers or exploiting vulnerabilities in package repositories.
-- [OSS-RISK-3](./0-1-risks/OSS3-Name-Confusion-Attack.md) Name Confusion Attacks: Attackers may create components whose names resemble names of legitimate open-source or system components (typo-squatting), suggest trustworthy authors (brand-jacking) or play with common naming patterns in different languages or ecosystems (combo-squatting).
-- [OSS-RISK-4](./0-1-risks/OSS4-Unmaintained-Software.md) Unmaintained Software: A component or component version may not be actively developed any more, thus, patches for functional and non-functional bugs may not be provided in a timely fashion (or not at all) by the original open source project.
-- [OSS-RISK-5](./0-1-risks/OSS5-Outdated-Software.md) Outdated Software: A project may use an old, outdated version of the component (though newer versions exist).
-- [OSS-RISK-6](./0-1-risks/OSS6-Untracked-Dependencies.md) Untracked Dependencies: Project developers may not be aware of a dependency on a component at all, e.g., because it is not part of an upstream component's SBOM, because SCA tools are not run or do not detect it, or because the dependency is not established using a package manager.
-- [OSS-RISK-7](./0-1-risks/OSS7-License-Regulatory-Risks.md) License Risk: A component or project may not have a license at all, or one that is incompatible with the intended use or whose requirements are not or cannot be met.
-- [OSS-RISK-8](./0-1-risks/OSS8-Immature-Software.md) Immature Software: An open source project may not apply development best-practices, e.g., not use a standard versioning scheme, have no regression test suite, review guidelines or documentation. As a result, a component may not work reliably or securely.
-- [OSS-RISK-9](./0-1-risks/OSS9-Unapproved-Change.md) Unapproved Change: A component may change without developers being able to notice, review or approve such changes, e.g., because the download link points to an unversioned resource, because a versioned resource has been modified or tampered with or due to an insecure data transfer.
-- [OSS-RISK-10](./0-1-risks/OSS10-UnderOversized-Dependency.md) Under/over-sized Dependency: A component may provide very little functionality (e.g. npm micro packages) or a lot of functionality (of which only a fraction may be used).
+- [OSS-RISK-1](./0-1-risks/OSS1-Known-Vulnerabilities.md) 既知の脆弱性 (Known Vulnerabilities): コンポーネントのバージョンには開発者が誤って導入した脆弱なコードが含まれている可能性があります。脆弱性の詳細は CVE、GitHub Security Advisories、その他の非公式なコミュニケーションチャネルなどを通じて、一般に公開されます。エクスプロイトやパッチは利用できることもできないこともあります。
+- [OSS-RISK-2](./0-1-risks/OSS2-Compromise-Legitimate-Package.md) 正規パッケージの侵害 (Compromise of Legitimate Package): 攻撃者は、たとえば、正規のプロジェクト管理者のアカウントをハイジャックしたり、パッケージリポジトリの脆弱性を悪用することで、既存の正規プロジェクトやディストリビューションインフラストラクチャの一部であるリソースを侵害して、コンポーネントに悪意のあるコードを注入する可能性があります。
+- [OSS-RISK-3](./0-1-risks/OSS3-Name-Confusion-Attack.md) 名前混乱攻撃 (Name Confusion Attacks): 攻撃者は正規のオープンソースやシステムのコンポーネントの名前に似た名前のコンポーネントを作成したり (typo-squatting)、信頼できる作成者を示唆したり (brand-jacking)、さまざまな言語やエコシステムで一般的な命名パターンを利用 (combo-squatting) する可能性があります。
+- [OSS-RISK-4](./0-1-risks/OSS4-Unmaintained-Software.md) メンテナンスされていないソフトウェア (Unmaintained Software): コンポーネントやコンポーネントバージョンは今後積極的に開発されない可能性があります。そのため、機能的および非機能的なバグに対するパッチが元のオープンソースプロジェクトによってタイムリーに (またはまったく) 提供されない可能性があります。
+- [OSS-RISK-5](./0-1-risks/OSS5-Outdated-Software.md) 古いままのソフトウェア (Outdated Software): プロジェクトは (新しいバージョンが存在しますが) 古いままのバージョンのコンポーネントを使用している可能性があります。
+- [OSS-RISK-6](./0-1-risks/OSS6-Untracked-Dependencies.md) 追跡されていない依存関係 (Untracked Dependencies): プロジェクト開発者はコンポーネントへの依存関係を全く認識していない可能性があります。たとえば、アップストリームコンポーネントの SBOM の一部ではない、SCA ツールが実行されていないか検出されていない、依存関係がパッケージマネージャを使用して確立されていない、などの理由です。
+- [OSS-RISK-7](./0-1-risks/OSS7-License-Regulatory-Risks.md) ライセンスのリスク (License Risk): コンポーネントやプロジェクトにはライセンスがまったくないことや、使用目的にそぐわないライセンスや、要件を満たしていないまたは満たすことができないライセンスである可能性があります。
+- [OSS-RISK-8](./0-1-risks/OSS8-Immature-Software.md) 未成熟なソフトウェア (Immature Software): オープンソースプロジェクトは開発のベストプラクティスを適用していない可能性があります。たとえば、標準的なバージョニングスキームを使用していない、回帰テストスイート、レビューガイドライン、ドキュメントがないなどです。その結果、コンポーネントは信頼性や安全性が機能しない可能性があります。
+- [OSS-RISK-9](./0-1-risks/OSS9-Unapproved-Change.md) 未承認の変更 (Unapproved Change): コンポーネントは開発者がそのような変更に気付いたり、レビューしたり、承認することができないまま、変更される可能性があります。たとえば、ダウンロードリンクがバージョン管理されていないリソースを指している、バージョン管理されているリソースが改変や改竄されている、安全でないデータ転送が行われている、などの理由です。
+- [OSS-RISK-10](./0-1-risks/OSS10-UnderOversized-Dependency.md) 過小または過大な依存関係 (Under/over-sized Dependency): コンポーネントはほとんど機能がない (rpm マイクロパッケージなど) のこともあれば、多くの機能 (そのうち一部しか使用されないかもしれません) を提供する可能性があります。
 
-## Authors and Contributors
+## 著者および貢献者
 
 ![Authors](https://raw.githubusercontent.com/OWASP/www-project-open-source-software-top-10/main/assets/images/authors.png)
 
-## Dependency Management 101
+## 依存関係マネジメント入門
 
-To better understand how these risks may affect us, let us quickly review some basic concepts of dependency management using a simple example. Just skip this section if you're familiar with dependency management.
+このようなリスクが私たちにどのような影響を及ぼすかをよりよく理解するために、簡単な例を使用して依存関係マネジメントの基本概念をいくつかさっと説明してみましょう。依存関係マネジメントに精通しているのであれば、このセクションはスキップしてください。
 
-The root node of the dependency graph displayed below represents the example project. The child nodes of the root represent 9 open source components the project "directly" depends on. Those components, however, depend on other components as well, all of which become "transitive" or "indirect" dependencies from the perspective of the top-level project.
+以下に表示されている依存関係グラフのルートノードは例のプロジェクトを表しています。ルートの子ノードはプロジェクトが「直接」依存する 9 つのオープンソースコンポーネントを表します。しかし、これらのコンポーネントは他のコンポーネントにも依存しており、トップレベルのプロジェクトから見るとそのすべてが「推移的」または「間接的」な依存関係になります。
 
-Direct dependencies are consciously selected by the project developers, e.g., through the declaration in a manifest file such as package.json (Node.js/npm) or pom.xml (Java/Maven) file. Package managers take care of downloading and installing those direct dependencies from 3rd party package repositories to the developers workstation or a CI/CD system. When doing so, package managers also identify transitive dependencies, resolve potential version conflicts and install them locally. In other words, plenty of components are downloaded in an automated fashion in order to make sure all code required by the example project (and more) is present on the developer machine.
+直接の依存関係は、たとえば package.json (Node.js/npm) や pom.xml (Java/Maven) ファイルなどのマニフェストファイルでの宣言を通じて、プロジェクト開発者によって意識的に選択されます。パッケージマネージャはサードパーティのパッケージリポジトリから開発者のワークステーションや CI/CD システムに直接の依存関係のダウンロードとインストールを行います。その際、パッケージマネージャは推移的依存関係も特定し、潜在的なバージョンの競合を解決してローカルにインストールします。言い換えると、たくさんのコンポーネントを自動化された方法でダウンロードし、例のプロジェクト (およびその他) に必要なすべてのコードが開発者のマシンに存在することを確認します。
 
-![Dependency Graph for Graph Maven Plugin]https://raw.githubusercontent.com/OWASP/www-project-open-source-software-top-10/main/assets/images/deptree.png)
+![Dependency Graph for Graph Maven Plugin](https://raw.githubusercontent.com/OWASP/www-project-open-source-software-top-10/main/assets/images/deptree.png)
 
-This high degree of automation boosted the reuse of open source components in today's software development. As a result, large portions of modern software have not been specifically developed for an application at hand, but come from generic open source projects. Looking again at the dependency graph, it is not surprising that the ratio of code written for the project itself (the root node) to the code of open source components is 1:4 or less. And we haven't even touched upon IDEs, build tools etc.
+この高度な自動化が今日のソフトウェア開発におけるオープンソースコンポーネントの再利用を後押ししました。その結果、現代のソフトウェアの大部分はあるアプリケーション向けに特別に開発されたものではなく、一般的なオープンソースプロジェクトから派生しています。依存関係グラフをもう一度見てみると、プロジェクト自体 (ルートノード) 向けに書かれたコードとオープンソースコンポーネントのコードの比率が 1:4 以下であることは驚くことではありません。また、IDE やビルドツールなどについても触れていません。
