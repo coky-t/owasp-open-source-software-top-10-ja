@@ -2,22 +2,22 @@
 
 **説明:**
 
-Attackers may create components whose names ressemble names of legitimate open-source or system components (typo-squatting), suggest trustworthy authors (brand-jacking) or play with common naming patterns in different languages or ecosystems.
+攻撃者は正規のオープンソースやシステムのコンポーネントの名前に似た名前のコンポーネントを作成したり (typo-squatting)、信頼できる作成者を示唆したり (brand-jacking)、さまざまな言語やエコシステムで一般的な命名パターンを利用 (combo-squatting) する可能性があります。
 
-Malicious code can be executed on end-user systems or on systems belonging to the organization that develops and/or operates the dependent software (e.g., build systems or developer workstations). The confidentiality, integrity and availability of systems and the data processed/stored thereon is at risk.
+悪意のあるコードはエンドユーザーシステム上や、依存するソフトウェアを開発や運用する組織に属するシステム (ビルドシステムや開発ワークステーションなど) 上で実行される可能性があります。システムおよびそのうえで処理や保存されるデータの機密性、完全性、可用性がリスクにさらされます。
 
 **事例:**
 
-1. [Colourama](https://bertusk.medium.com/cryptocurrency-clipboard-hijacker-discovered-in-pypi-repository-b66b8a534a8) (PyPI, 2018): Typo-squatting attack on the legitimate Python package "colorama", redirecting Bitcoin transfers to an attacker-controlled wallet.
+1. [Colourama](https://bertusk.medium.com/cryptocurrency-clipboard-hijacker-discovered-in-pypi-repository-b66b8a534a8) (PyPI, 2018): 正規の Python パッケージ "colorama" に対するタイポスクワッティング攻撃により、ビットコインの送金を攻撃者の管理するウォレットにリダイレクトします。
 
 **対応:**
 
-Prior to installing/using a component: 
-1. Check code characteristics (pre/post installation hooks, encoded payloads, etc.) and project characteristics (source code repository, maintainer accounts, release frequency, number of downstream users, etc.) for leading risk indicators.
+コンポーネントをインストールや使用する前に:
+1. コードの特定 (インストール前後のフック、エンコードされたペイロードなど) とプロジェクトの特性 (ソースコードリポジトリ、管理者アカウント、リリース頻度、ダウンストリームユーザーの数など) を主要なリスク指標でチェックします。
 
-    Note that some component metadata is not verified by package repositories, thus, can easily be forged by attackers.
-    
-2. Verify that the component carries a signature from a trusted party (for ecosystems that support/require signatures)
+    一部のコンポーネントメタデータはパッケージリポジトリによって検証されていないため、攻撃者によって簡単に偽造される可能性があることに注意してください。
+
+2. コンポーネントが信頼できる当事者からの署名を持っていることを検証します (署名をサポートや要求するエコシステムの場合)
 
 **参照:**
 
