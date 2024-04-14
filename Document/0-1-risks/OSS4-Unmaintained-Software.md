@@ -2,11 +2,11 @@
 
 **説明:**
 
-A component or component version may not be actively developed or supported any more, i.e. patches for new functional and security bugs may not be developed.
+コンポーネントやコンポーネントバージョンは今後積極的に開発やサポートされない可能性があります。つまり、新機能やセキュリティバグに対するパッチが開発されない可能性があります。
 
-Patch development may therefore need to be done by downstream developers with potentially less experience and knowledge regarding the affected component.
+そのため、パッチの開発は、影響を受けるコンポーネントに関する経験や知識が潜在的に少ないダウンストリーム開発者が行う必要があるかもしれません。
 
-This can result in increased efforts and longer resolution times. During that time, system access or functionality may need to be restricted to avoid continued exposure.
+この結果、作業量が増大し、解決に要する時間が長くなる可能性があります。その間、継続的な露出を避けるために、システムへのアクセスや機能を制限する必要があるかもしれません。
 
 **事例:**
 
@@ -16,23 +16,23 @@ This can result in increased efforts and longer resolution times. During that ti
 
 **対応:**
 
-1. Check indicators for project liveliness and health.
+1. プロジェクトの活性と健全性の指標をチェックします。
 
-    However, note that little activity can also be a sign of maturity. Projects that are considered feature-complete and mature will see less activity than projects under active development, and still receive timely patches in case of problems.
+    ただし、アクティビティが少ないことが成熟の証となる可能性もあることに注意してください。機能が完成し成熟したとみなされるプロジェクトは活発に開発が行われているプロジェクトよりもアクティビティが少なくなりますが、問題が発生した場合には依然としてタイムリーにパッチを受け取ることができます。
 
-    Example indicators:
+    指標の例:
 
-    - Recent issue and commit activity means the project is active.
-    - A high ratio of issues opened by external contributors indicates that the project is active.
-    - Activity from corporate affiliated accounts that indicate that the project can have reliable backing and support.
-    - Activity from reputable accounts indicates that the repository is well-maintained.
-    - The repository has frequent releases indicating a commitment to maintaining and supporting the codebase.
+    - 最近のイシューとコミットアクティビティはプロジェクトがアクティブであることを意味します。
+    - 外部貢献者によってオープンされたイシューの比率が高いことはプロジェクトがアクティブであることを示しています。
+    - 企業関連アカウントからのアクティビティはプロジェクトが信頼できる支援とサポートを得られることを示しています。
+    - 信頼できるアカウントからのアクティビティはリポジトリが適切に維持されていることを示しています。
+    - 頻繁にリリースされているリポジトリはコードベースのメンテナンスとサポートへのコミットメントを示しています。
 
 
-2. Search for information on a project's maintenance or support strategy, e.g., the presence and dates of long-term support (LTS) versions.
+2. プロジェクトのメンテナンスやサポート戦略に関する情報 (長期サポート (LTS) バージョンの有無や日付など) を検索します。
 
-    The Spring project is a great example for documenting [support time frames](https://spring.io/projects/spring-boot#support).
-3. Check the project page to see whether its has been archived, or whether there are any explicit statements regarding the project's maintenance status.
+    Spring プロジェクトは [サポート期間](https://spring.io/projects/spring-boot#support) をドキュメント化している優れた事例です。
+3. プロジェクトページをチェックして、アーカイブされているかどうか、プロジェクトのメンテナンスステータスに関する明示的な記述があるかどうかを確認します。
 
 **参照:**
 
