@@ -2,22 +2,22 @@
 
 **説明:**
 
-A component version may contain vulnerable code, accidentally introduced by its developers. Vulnerability details are publicly disclosed, e.g, through CVE, GitHub Security Advisories or other, more informal communication channels. Exploits and patches may or may not be available.
+コンポーネントのバージョンには開発者が誤って導入した脆弱なコードが含まれている可能性があります。脆弱性の詳細は CVE、GitHub Security Advisories、その他の非公式なコミュニケーションチャネルなどを通じて、一般に公開されます。エクスプロイトやパッチは利用できることもできないこともあります。
 
-The vulnerability may be exploitable in the context of the downstream software, which could compromise the confidentiality, integrity or availability of the respective system or its data, allow laterial movements in the target environment or have other negative effects.
+脆弱性はダウンストリームソフトウェアのコンテキストで悪用される可能性があり、それぞれのシステムやそのデータの機密性、完全性、可用性を脅かしたり、ターゲット環境でラテラルムーブメントを可能にしたり、その他の悪影響を及ぼす可能性があります。
 
 **事例:**
 
-1. [CVE-2017-5638](https://cwiki.apache.org/confluence/display/WW/S2-045) in Apache Struts, which caused the [Equifax data breach](https://en.wikipedia.org/wiki/2017_Equifax_data_breach)
-2. [CVE-2021-44228](https://logging.apache.org/log4j/2.x/security.html#CVE-2021-44228) in Apache Log4j, also called [Log4Shell](https://en.wikipedia.org/wiki/Log4Shell)
+1. [CVE-2017-5638](https://cwiki.apache.org/confluence/display/WW/S2-045) Apache Struts で [Equifax データ侵害](https://en.wikipedia.org/wiki/2017_Equifax_data_breach) の原因となりました
+2. [CVE-2021-44228](https://logging.apache.org/log4j/2.x/security.html#CVE-2021-44228) Apache Log4j で [Log4Shell](https://en.wikipedia.org/wiki/Log4Shell) とも呼ばれています
 
 **対応:**
 
-1. Monitor applications, containers and systems for the presence of (direct and transitive) open source dependencies with known vulnerabilities
-2. Prioritize the analysis and mitigation on the basis of, for instance
-    - Scores and metrics like [CVSS](https://www.first.org/cvss/) and [EPSS](https://www.first.org/epss/)
-    - Threat intelligence like the availability and maturity of exploit code, or information on attacks observed in the wild such as provided by the CISA [KEV catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
-    - DAST and SAST tools, which determine if vulnerable code can be executed in the context of the dependent software
+1. 既知の脆弱性がある (直接的および推移的) オープンソースの依存関係の存在がないか、アプリケーション、コンテナ、システムを監視します。
+2. たとえば、以下に基づいて分析と緩和に優先順位を付けます。
+    - [CVSS](https://www.first.org/cvss/) や [EPSS](https://www.first.org/epss/) などのスコアやメトリクス
+    - エクスプロイトコードの可用性や成熟度などの脅威インテリジェンス、あるいは CISA [KEV カタログ](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) で提供されるような、実際に観測された攻撃に関する情報
+    - DAST および SAST ツールで、脆弱なコードが依存するソフトウェアのコンテキストで実行可能かどうかを判断します
 
 **参照:**
 
