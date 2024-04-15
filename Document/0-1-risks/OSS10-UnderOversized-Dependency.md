@@ -2,32 +2,32 @@
 
 **説明:**
 
-A component may provide very little functionality (e.g. npm micro packages) or a lot of functionality (of which only a fraction may be used).
+コンポーネントはほとんど機能がない (rpm マイクロパッケージなど) のこともあれば、多くの機能 (そのうち一部しか使用されないかもしれません) を提供することもあります。
 
-Very small components, e.g. ones containing few lines of code only, are subject to the same supply chain risks as large ones, e.g. account take-over, malicious pull requests or CI/CD vulnerabilities, for comparably little functionality. In other words, in exchange for very few lines of code used, the consumer's security becomes dependent on the upstream project's security and development posture.
- 
-Very large components, on the other hand, may have accumulated many features that are not needed in standard use-cases, but contribute to the component's attack surface. Additionally, such unused features may also bring in additional, unused dependencies (bloated dependencies).
+非常に小さいコンポーネント (数行のコードしかないものなど) は、比較的小さな機能性にもかかわらず、大規模なものと同じサプライチェーンリスク (アカウントの乗っ取り、悪意のあるプルリクエスト、CI/CD の脆弱性など) にさらされます。言い換えると、使用されるコード行数が非常に少ない代わりに、利用者のセキュリティはアップストリームプロジェクトのセキュリティと開発態勢に依存することになります。
+
+一方、非常に大規模なコンポーネントは、標準的なユースケースでは必要とされませんが、コンポーネントの攻撃対象領域を助長する多くの機能を蓄積している可能性があります。さらに、そのような未使用の機能は、さらなる未使用の依存関係 (肥大化した依存関係) をもたらす可能性もあります。
 
 **事例:**
 
 1. [Apache Log4j](https://logging.apache.org/log4j/2.x/)
 
-    Included functionality to download and execute arbitrary Java classes from remote servers, which eventually led to [Log4Shell](https://en.wikipedia.org/wiki/Log4Shell).  
+    リモートサーバーから任意の Java クラスをダウンロードして実行する機能が含まれており、最終的に [Log4Shell](https://en.wikipedia.org/wiki/Log4Shell) につながりました。
 
 2. [Left-pad](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/) (npm, 2016)
 
-    Contained 11 lines of code to pad strings. Its removal from npm broke the builds of numerous downstream consumers.
+    文字列を詰め込むための 11 行のコードが含まれていました。npm から削除されたことで、多数のダウンストリームの利用者のビルドが壊れました。
 
 **対応:**
 
-1. Become aware of unused component capabilities, esp. if they use critical (security sensitive) APIs such as to establish network connections.
+1. 未使用のコンポーネント機能を認識します。特にネットワーク接続の確立など、重要な (セキュリティ上センシティブな) API を使用する場合。
 
-    Evaluate possibilities to disable unused capabilities, or move to smaller alternative open source components with fewer capabilities.
-2. Become aware of micro packages, and consider redeveloping their functionality internally.
+    未使用の機能を無効にするか、より少ない機能を持つ、より小さな代替オープンソースコンポーネントに移行する可能性を評価します。
+2. マイクロパッケージを認識し、その機能を内部で再開発することを検討します。
 
 **参照:**
 
-1. Definition: [Feature creep](https://en.wikipedia.org/wiki/Feature_creep)
-2. Tools to uncover the use of security sensitive APIs:
-    - Google [Capslock](https://github.com/google/capslock) for Go
-    - Microsoft [Application Inspector](https://github.com/microsoft/ApplicationInspector) for various programming languages
+1. 定義: [機能クリープ](https://en.wikipedia.org/wiki/Feature_creep)
+2. セキュリティ上センシティブな API の使用を明らかにするツール:
+    - Google [Capslock](https://github.com/google/capslock) Go 向け
+    - Microsoft [Application Inspector](https://github.com/microsoft/ApplicationInspector) さまざまなプログラミング言語向け
