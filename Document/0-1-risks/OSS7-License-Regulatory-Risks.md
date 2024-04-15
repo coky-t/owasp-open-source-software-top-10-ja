@@ -2,15 +2,15 @@
 
 **説明:**
 
-A component or project may not have a license at all, one that is incompatible with the intended use by a downstream consumer, or one whose requirements are not or cannot be met by a downstream user.
+コンポーネントやプロジェクトにはライセンスがまったくないことや、ダウンストリームの利用者による使用目的にそぐわないライセンスや、ダウンストリームユーザーによって要件を満たしていないまたは満たすことができないライセンスである可能性があります。
 
-A component may also violate license terms independent from downstream use, e.g., if it is licensed as GPL but includes files licensed under the original (4-clause) BSD license.
+コンポーネントはダウンストリームでの使用とは無関係に、ライセンス条項に違反することもあります。たとえば、GPL としてライセンスされているが、オリジナル (4 条項) の BSD ライセンスでライセンスされているファイルを含んでいる場合です。
 
-A component may also conflict with legal and regulatory requirements, e.g., related to FedRAMP certification or export control.
+コンポーネントは FedRAMP 認証や輸出管理などに関連する法規制要件に抵触する可能性もあります。
 
-It is important to use components in compliance with their license terms. The absence of a license or non-compliant use can result in copyright or license infringements, which the copyright holder can take legal action against.
+ライセンス条項に従ってコンポーネントを使用することが重要です。ライセンスがなかったり、準拠していない使用は、著作権やライセンスの侵害につながる可能性があり、著作権者は法的措置を講じることができます。
 
-The violation of legal and regulatory requirements can constrain or hamper addressing certain verticals or markets.
+法規制要件に違反すると、特定の業種や市場への対応を強制されたり妨げられる可能性があります。
 
 **事例:**
 
@@ -18,12 +18,12 @@ The violation of legal and regulatory requirements can constrain or hamper addre
 
 **対応:**
 
-1. Identify acceptable licenses for the intended use of the component in the software under development.
+1. 開発中のソフトウェアにおけるコンポーネントの使用目的に対して許容可能なライセンスを特定します。
 
-    This should consider, for example, how the component is linked, the software's deployment model (cloud, on-premise/device) and the intended distribution scheme.
-2. Comply with requirements stated in the open source licenses.
-3. Avoid components without license.
-4. Scrutinize component files for multiple and/or incompatible licenses.
+    これは、たとえば、コンポーネントのリンク方法、ソフトウェアのデプロイメントモデル (クラウド、オンプレミス/デバイス)、意図する配布スキームなどを考慮すべきです。
+2. オープンソースライセンスに記載されている要件を遵守します。
+3. ライセンスのないコンポーネントは避けます。
+4. 複数のライセンスや互換性のないライセンスがないかコンポーネントファイルを精査します。
 
 **参照:**
 
