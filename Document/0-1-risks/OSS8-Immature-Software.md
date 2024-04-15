@@ -2,28 +2,28 @@
 
 **説明:**
 
-An open source project may not apply development best-practices, e.g., not use a standard versioning scheme, have no regression test suite, no development or review guidelines or no documentation. As a result, a component may not work reliably or securely (in the sense of having security weaknesses that result in exploitable vulnerabilities).
+オープンソースプロジェクトは開発のベストプラクティスを適用していない可能性があります。たとえば、標準的なバージョニングスキームを使用していない、回帰テストスイート、開発やレビューのガイドライン、ドキュメントがないなどです。その結果、コンポーネントは信頼性や安全性が (悪用可能な脆弱性をもたらすセキュリティ上の弱点があるという意味で) 機能しない可能性があります。
 
-The dependency on an immature component or project comes with operational risks. The dependent software may not work as expected and result in runtime reliability issues, or its use may be overly complex and expensive for the dependent software development organization.
+未成熟なコンポーネントやプロジェクトへの依存には運用上のリスクが伴います。依存するソフトウェアが期待通りに動作せず、実行時の信頼性に問題が生じたり、依存するソフトウェア開発組織にとってその使用が過度に複雑で高価になるかもしれません。
 
-For example, a component or project may lack documentation, may not use or comply with an established versioning scheme (which can result in breaking changes during component updates), or may not have a test suite to discover regressions introduced through pull/merge requests. Such cases can increase the effort of developers depending on such components.
+たとえば、コンポーネントやプロジェクトにドキュメントがなかったり、確立されたバージョニングスキームを使用していなかったり遵守していなかったり (コンポーネントアップデート中に重大な変更が生じる可能性があります)、プルリクエストやマージリクエストを通じて導入されたリグレッションを発見するためのテストスイートがないかもしれません。そのような場合、そのようなコンポーネントに依存している開発者の労力が増大する可能性があります。
 
 **事例:**
 
-- None
+- なし
 
 **対応:**
 
-1. Check quality indicators and whether a project follows development best-practices.
+1. 品質指標および、プロジェクトがベストプラクティスに従っているかどうかをチェックします。
 
-    Example indicators:
-    - The project includes test code.
-    - Displaying the Code Coverage badge means that the repository is using code coverage tools in its development process.
-    - The repository includes documentation making it easier to understand and use.
-    - The repository uses CI and a high fraction of commits pass the CI checks which is a sign of good code quality.
-    - When a repository contains binary files it is harder to analyze and assess its functionality and risks.
+    指標の例:
+    - プロジェクトにはテストコードが含まれています。
+    - コードカバレッジバッジの表示は、リポジトリが開発プロセスでコードカバレッジツールを使用していることを意味します。
+    - リポジトリには理解しやすく使いやすいドキュメントが含まれています。
+    - リポジトリは CI を使用しており、コミットの大部分が CI チェックに合格しています。これはコード品質が良いことを示しています。
+    - リポジトリにバイナリファイルが含まれていると、その機能やリスクを分析して評価することが難しくなります。
 
-2. A proxy for checking project maturity may also be the number of downstream dependents.
+2. プロジェクトの成熟度をチェックするための代用として、ダウンストリームの依存の数とすることもできます。
 
 **参照:**
 
