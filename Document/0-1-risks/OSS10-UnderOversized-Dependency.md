@@ -31,3 +31,4 @@
 2. セキュリティ上センシティブな API の使用を明らかにするツール:
     - Google [Capslock](https://github.com/google/capslock) Go 向け
     - Microsoft [Application Inspector](https://github.com/microsoft/ApplicationInspector) さまざまなプログラミング言語向け
+    - Rahman et al.: [Less Is More](https://arxiv.org/pdf/2408.02846): より良い依存関係選択のための Java におけるセキュリティ重視の API 呼び出しに関する混合手法研究
