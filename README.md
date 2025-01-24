@@ -7,7 +7,7 @@ This is the unofficial Japanese translation of the [OWASP Open Source Software T
 - Project Site - <https://owasp.org/www-project-open-source-software-top-10/>
 - Project Repository - <https://github.com/OWASP/www-project-open-source-software-top-10>
 
-# OWASP オープンソースソフトウェア Top 10 日本語版
+## OWASP オープンソースソフトウェア Top 10 日本語版
 
 * [オープンソースソフトウェア Top 10](Document/index.md)
 * [OSS-RISK-1 既知の脆弱性 (Known Vulnerabilities)](Document/0-1-risks/OSS1-Known-Vulnerabilities.md)
