@@ -2,6 +2,9 @@
 
 This is the unofficial Japanese translation of the [OWASP Open Source Software Top 10](https://github.com/OWASP/www-project-open-source-software-top-10).
 
+- Document Site - <https://coky-t.gitbook.io/owasp-open-source-software-top-10-ja/>
+- Document Repository - <https://github.com/coky-t/owasp-open-source-software-top-10-ja>
+
 ### Originator
 
 - Project Site - <https://owasp.org/www-project-open-source-software-top-10/>
@@ -28,3 +31,6 @@ This is the unofficial Japanese translation of the [OWASP Open Source Software T
 ## Translator (Japanese)
 
 [Koki Takeyama](https://github.com/coky-t)
+
+- Document Site - <https://coky-t.gitbook.io/owasp-docs-ja/>
+- Document Repository - <https://github.com/coky-t/owasp-docs-ja>
